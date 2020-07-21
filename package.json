@@ -4,6 +4,7 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "prettier": "2.0.5",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
