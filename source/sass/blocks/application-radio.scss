@@ -1,0 +1,39 @@
+.application-radio {
+  margin-bottom: 18px;
+}
+
+
+.application-radio__input {
+  &+label::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $gray;
+    border-radius: 50%;
+  }
+
+  &:checked+label::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    background-color: $background-green-color;
+    border-radius: 50%;
+  }
+}
+
+.application-radio__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  padding-left: 60px;
+}

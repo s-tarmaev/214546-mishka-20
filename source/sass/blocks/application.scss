@@ -1,0 +1,9 @@
+// .application {}
+
+.application__text {
+  @include font (13px, 24px, 400);
+}
+
+.application__button {
+  @include button ();
+}

@@ -1,0 +1,14 @@
+// .production {}
+
+.production__title {
+  @include font (17px, 24px, 700);
+}
+
+.production__text {
+  @include font (13px, 24px, 400);
+}
+
+.production__button {
+  @include font (17px, 16px, 700);
+  @include button ();
+}

@@ -1,0 +1,11 @@
+.about__title {
+  @include font (25px, 30px, 700);
+}
+
+.about__list {
+  @include reset-list;
+}
+
+.about__text {
+  @include font (17px, 20px, 700);
+}

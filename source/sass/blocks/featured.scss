@@ -1,0 +1,30 @@
+.featured__title {
+  @include font (17px, 20px, 700);
+  color: $green-left;
+  padding-bottom: 17.5px;
+}
+
+.featured__title-item {
+  @include font (25px, 30px, 700);
+}
+
+.featured__description {
+  @include font (17px, 24px, 400);
+  padding-bottom: 28px;
+  color: $gray;
+}
+
+.featured__table {
+  @include font (15px, 20px, 400);
+  color: $gray;
+  border-collapse: collapse;
+}
+
+.featured__price {
+  @include font (17px, 24px, 700);
+  color: $gray;
+}
+
+.featured__button {
+  @include button ();
+}

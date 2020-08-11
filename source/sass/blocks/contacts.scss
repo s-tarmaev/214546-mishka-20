@@ -1,0 +1,16 @@
+.contacts__title {
+  @include font (18px, 30px, 700);
+}
+
+.contacts__list {
+  @include reset-list;
+}
+
+.contacts__item {
+  @include font (15px, 30px, 400);
+  color: $gray;
+}
+
+.contacts__button {
+  @include button ();
+}

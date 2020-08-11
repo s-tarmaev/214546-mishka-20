@@ -1,0 +1,35 @@
+.application-checkbox {
+  margin-bottom: 22px;
+}
+
+.application-checkbox__input {
+  &+label::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: -2px;
+    width: 40px;
+    height: 39px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $gray;
+  }
+
+  &+label::after {
+    content: "\2714";
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 14px;
+    height: 12px;
+  }
+}
+
+.application-checkbox__label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  padding-left: 60px;
+}

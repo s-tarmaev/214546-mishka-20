@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Academy: Мишка</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a class="logo">
-      <img src="https://via.placeholder.com/150x150" width="86" height="35" alt="Магазин «Mishka»" />
+    <a class="logo" href="index.html">
+      <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Mishka»" />
     </a>
     <nav class="main-nav">
       <div class="main-nav__wrapper">
@@ -26,9 +27,8 @@
           </li>
           <li class="site-list__item">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="search-form__label visually-hidden" for="search">Поиск
-                <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" />
-              </label>
+              <label class="search-form__label visually-hidden" for="search">Поиск</label>
+              <input class="search-form__input" type="search" name="search" id="search" placeholder="Поиск по сайту" />
             </form>
           </li>
           <li class="site-list__item cart-list">
@@ -38,9 +38,9 @@
     </nav>
   </header>
   <main class="page-main">
-    <section class="catalog">
+    <section class="product-catalog">
       <h1 class="page-title">Каталог товаров</h1>
-      <ul class="catalog__list">
+      <ul class="product-catalog__list">
         <li class="item-element">
           <img src="https://via.placeholder.com/260x195" width="260" height="195" alt="Зайчик-попрыгайчик" />
           <h3 class="item-element__title">Зайчик-попрыгайчик</h3>

@@ -1,0 +1,15 @@
+.product-catalog__list {
+  @include reset-list;
+}
+
+.item-element__title {
+  @include font (17px, 24px, 700);
+}
+
+.item-element__description {
+  @include font (13px, 30px, 400);
+}
+
+.item-element__price {
+  @include font (15px, 24px, 700);
+}
