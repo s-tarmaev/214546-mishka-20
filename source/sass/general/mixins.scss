@@ -1,0 +1,41 @@
+@mixin font ($size, $lnheight, $weight) {
+  font-family: "Opensansbold", "Arial", sans-serif;
+  font-style: normal;
+  font-size: $size;
+  line-height: $lnheight;
+  font-weight: $weight;
+}
+
+@mixin bordernone () {
+  border: none;
+  outline: none;
+}
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button () {
+  @include font (17px, 16px, 700);
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: $gray;
+  background-color: $white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $gray;
+
+  &:hover {
+    color: $white;
+    background-color: $gray;
+  }
+
+  &:active {
+    color: $gray7;
+    background-color: $gray;
+  }
+}

@@ -1,0 +1,29 @@
+.application-form {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.application-form__item {
+  border: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $background-green-color;
+  padding-left: 0;
+}
+
+.application-form__legend {
+  @include font (17px, 24px, 700);
+  color: $green-left;
+  padding-right: 18px;
+  margin-left: 0;
+}
+
+.application-form__list {
+  @include reset-list;
+}
+
+.application-form__option {
+  @include font (17px, 24px, 700);
+}
+
+// .application-form__textarea {}

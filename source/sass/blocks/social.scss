@@ -1,0 +1,20 @@
+.social {
+  @include reset-list;
+}
+
+.social__link {
+  &--instagram {
+    background-image: url(../../img/icon-insta.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--facebook {
+    background-image: url(../../img/icon-fb.svg);
+    background-repeat: no-repeat;
+  }
+
+  &--twitter {
+    background-image: url(../../img/icon-twitter.svg);
+    background-repeat: no-repeat;
+  }
+}
