@@ -1,0 +1,34 @@
+.goods-list {
+  @include wrapper;
+  background: linear-gradient(to bottom, $green-left 50%, $green-right 50%);
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(to right, transparent 50px, $green-left 50px, $green-left 50%, $green-right 50%, $green-left 1100px, transparent 1100px);
+  }
+}
+
+.goods-list__item {
+  @include font (19px, 24px, 700);
+  padding-top: 24px;
+  padding-bottom: 31px;
+
+  & a {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 31px;
+    padding-left: 30px;
+    color: $white;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 25px;
+      padding-bottom: 34px;
+      padding-left: 36px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    color: transparent;
+  }
+}

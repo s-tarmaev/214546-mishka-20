@@ -1,0 +1,15 @@
+.search-form__input {
+  @include bordernone;
+  padding: 0;
+
+  &::placeholder {
+    @include font (17px, 24px, 700);
+    color: $black;
+  }
+}
+
+.search-form {
+  width: 100%;
+
+  // @media (min-width: $tablet-width) {}
+}

@@ -1,4 +1,30 @@
 .logo {
+  text-align: center;
+
+  &--footer {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  // @media (min-width: $tablet-width) {}
+  // @media (min-width: $desktop-width) {}
+}
+
+.logo img {
   width: 86px;
-  height: 35px;
+  height: 79px;
+
+  // @media (min-width: $tablet-width) {}
+  // @media (min-width: $desktop-width) {}
 }
