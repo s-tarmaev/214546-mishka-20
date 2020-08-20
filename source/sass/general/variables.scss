@@ -1,14 +1,22 @@
 // basic
+
 $black: #000000;
 $gray: #444444;
 $gray7: #7c7c7c;
-$light-gray: #ECECEC;
-$grayscale: #F1F1F1;
-$white: #FFFFFF;
+$light-gray: #ececec;
+$grayscale: #f1f1f1;
+$white: #ffffff;
 
 // special
-$green-right-hover: #46C1AE;
-$green-left-hover: #59D5BC;
-$background-green-color: #62D1BA;
-$green-right: #56C3B2;
-$green-left: #63D1BB;
+
+$green-right-hover: #46c1ae;
+$green-left-hover: #59d5bc;
+$background-green-color: #62d1ba;
+$green-right: #56c3b2;
+$green-left: #63d1bb;
+
+// Viewports
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1100px;

@@ -1,4 +1,4 @@
-@mixin font ($size, $lnheight, $weight) {
+@mixin font($size, $lnheight, $weight) {
   font-family: "Opensansbold", "Arial", sans-serif;
   font-style: normal;
   font-size: $size;
@@ -6,7 +6,7 @@
   font-weight: $weight;
 }
 
-@mixin bordernone () {
+@mixin bordernone {
   border: none;
   outline: none;
 }
@@ -17,8 +17,9 @@
   padding: 0;
 }
 
-@mixin button () {
-  @include font (17px, 16px, 700);
+@mixin button {
+  display: block;
+  @include font(17px, 16px, 700);
   text-align: center;
   text-transform: uppercase;
   padding-top: 16px;
@@ -37,5 +38,16 @@
   &:active {
     color: $gray7;
     background-color: $gray;
+  }
+}
+
+@mixin wrapper {
+  padding: 0 30px;
+  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+  @media (min-width: $desktop-width) {
+    max-width: 1150px;
   }
 }

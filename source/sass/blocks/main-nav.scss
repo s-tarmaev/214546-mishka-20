@@ -1,0 +1,33 @@
+.main-nav {
+  width: 100%;
+}
+
+.main-nav__wrapper {
+  @include wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+  @include bordernone;
+  width: 21px;
+  height: 20px;
+  background-color: transparent;
+  background-image: url(../../img/icon-menu-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px 20px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include reset-list;
+  width: 100%;
+}
