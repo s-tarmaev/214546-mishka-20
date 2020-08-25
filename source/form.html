@@ -40,12 +40,14 @@
   <main class="page-main">
     <section class="application">
       <h1 class="page-title">Вязание на заказ</h1>
+      <div class="application__wrapper">
       <p class="application__text">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
         форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
       <form class="application-form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">Тип</legend>
           <ul class="application-form__list">
             <li class="application-form__option application-radio">
@@ -55,14 +57,16 @@
             </li>
             <li class="application-form__option application-radio">
               <input class="visually-hidden application-radio__input" type="radio" name="type"
-                value="toy" />
+                value="toy" id="application-toy">
               <label class="application-radio__label" for="application-toy">Детская игрушка</label>
             </li>
           </ul>
+        </div>
         </fieldset>
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">Цвет</legend>
-          <ul class="application-form__list">
+          <ul class="application-form__list application-form__list--wrap">
             <li class="application-form__option application-checkbox">
               <input class="visually-hidden application-checkbox__input" type="checkbox"
                 name="color-white" id="application-white" checked />
@@ -80,7 +84,7 @@
             </li>
             <li class="application-form__option application-checkbox">
               <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-black" id="application-tiffany" />
+                name="color-black" id="application-black" />
               <label class="application-checkbox__label" for="application-black">Черный</label>
             </li>
             <li class="application-form__option application-checkbox">
@@ -94,8 +98,10 @@
               <label class="application-checkbox__label" for="application-orange">Оранжевый</label>
             </li>
           </ul>
+        </div>
         </fieldset>
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">ФИО</legend>
           <ul class="application-form__list">
             <li class="application-form__option">
@@ -111,27 +117,35 @@
               <input class="application-name" id="middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете" />
             </li>
           </ul>
+        </div>
         </fieldset>
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">Тел</legend>
           <label class="visually-hidden" for="telephone">Укажите телефон</label>
           <input class="application-name" id="telephone" type="tel" name="telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" />
+        </div>
         </fieldset>
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">E-mail</legend>
           <label class="visually-hidden" for="telephone">Укажите электронную почту</label>
           <input class="application-name" id="email" type="email" name="email" placeholder="Ваш Email*" />
+        </div>
         </fieldset>
         <fieldset class="application-form__item">
+          <div class="application-form__wrapper">
           <legend class="application-form__legend">Доп</legend>
           <label class="visually-hidden" for="wishes">Пожелания к заказу</label>
           <textarea class="application-form__textarea" name="wishes" id="wishes" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
         </fieldset>
-        <small>*Поля обязательны для заполнения</small>
+        <small class="application-form__annotation">*Поля обязательны для заполнения</small>
         <button class="application__button" type="submit">
           Отправить заказ
         </button>
       </form>
+    </div>
     </section>
   </main>
   <footer class="page-footer">

@@ -2,9 +2,8 @@
   margin-bottom: 18px;
 }
 
-
 .application-radio__input {
-  &+label::before {
+  & + label::before {
     content: "";
     position: absolute;
     left: 1px;
@@ -17,13 +16,13 @@
     border-radius: 50%;
   }
 
-  &:checked+label::after {
+  &:checked + label::after {
     content: "";
     position: absolute;
-    top: 12px;
-    left: 14px;
-    width: 18px;
-    height: 18px;
+    top: 11px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
     background-color: $background-green-color;
     border-radius: 50%;
   }

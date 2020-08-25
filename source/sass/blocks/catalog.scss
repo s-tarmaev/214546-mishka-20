@@ -1,24 +1,17 @@
+// .catalog {}
+// background-image: url(../../img/hero-mobile@1x.jpg);
+// background-repeat: no-repeat;
+// background-position: center;
+// background-size: contain;
+
 .catalog__title {
-  @include font (27px, 30px, 700);
-  padding-top: 73px;
-  padding-bottom: 120px;
+  @include font(27px, 30px, 700);
+  text-align: center;
+  height: 273px;
   margin: 0;
-  background-image: url(../../img/hero-mobile@1x.jpg);
-  background-repeat: no-repeat;
+  padding-top: 73px;
 }
 
 .catalog__list {
   @include reset-list;
-}
-
-.goods-list__item {
-  @include font (19px, 24px, 700);
-  padding-bottom: 31px;
-  padding-left: 30px;
-  color: $white;
-  background-color: $green-left;
-}
-
-.goods-list__item:last-child {
-  background-color: $green-right;
 }

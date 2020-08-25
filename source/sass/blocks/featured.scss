@@ -1,30 +1,58 @@
+.featured__wrapper {
+  @include wrapper;
+  margin-top: 31px;
+
+  display: flex;
+  flex-direction: column;
+}
+
 .featured__title {
-  @include font (17px, 20px, 700);
+  @include font(17px, 20px, 700);
+  text-transform: uppercase;
   color: $green-left;
-  padding-bottom: 17.5px;
+  margin: 0;
+  margin-bottom: 17px;
 }
 
 .featured__title-item {
-  @include font (25px, 30px, 700);
+  order: -1;
+  @include font(25px, 30px, 700);
+  margin: 0;
 }
 
 .featured__description {
-  @include font (17px, 24px, 400);
-  padding-bottom: 28px;
+  @include font(17px, 24px, 400);
+  margin: 0;
+  margin-bottom: 28px;
   color: $gray;
 }
 
 .featured__table {
-  @include font (15px, 20px, 400);
+  @include font(15px, 20px, 400);
   color: $gray;
   border-collapse: collapse;
+  margin-bottom: 28px;
+}
+
+.featured__table tr {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $light-gray;
 }
 
 .featured__price {
-  @include font (17px, 24px, 700);
+  @include font(17px, 24px, 700);
   color: $gray;
+  margin: 25px auto;
 }
 
 .featured__button {
-  @include button ();
+  @include button();
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 292px;
+  }
 }

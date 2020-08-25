@@ -1,11 +1,18 @@
+// main
 @import "general/normalize.scss";
 @import "general/fonts.scss";
 @import "general/variables.scss";
 @import "general/mixins.scss";
 @import "general/common.scss";
-
+// index
 @import "blocks/page-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/search-form.scss";
+@import "blocks/cart-list.scss";
 @import "blocks/catalog.scss";
+@import "blocks/goods-list.scss";
 @import "blocks/featured.scss";
 @import "blocks/about.scss";
 @import "blocks/reviews.scss";
@@ -13,12 +20,11 @@
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-
 @import "blocks/page-title.scss";
+// catalog
 @import "blocks/product-catalog.scss";
 @import "blocks/production.scss";
-
-
+// form
 @import "blocks/application.scss";
 @import "blocks/application-form.scss";
 @import "blocks/application-radio.scss";

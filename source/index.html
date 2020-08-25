@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -41,13 +42,14 @@
       Магазин «Mishka» — вязанные вещи ручной работы для дома
     </h1>
     <section class="catalog">
-      <h2 class="catalog__title">Милые штуки ручной работы для дома</h2>
+    <h2 class="catalog__title">Милые штуки ручной работы для дома</h2>
       <ul class="catalog__list goods-list">
-        <li class="goods-list__item">Предметы интерьера</li>
-        <li class="goods-list__item">Детские игрушки</li>
+        <li class="goods-list__item"><a href="#">Предметы<br> интерьера</a></li>
+        <li class="goods-list__item"><a href="#">Детские<br> игрушки</a></li>
       </ul>
     </section>
     <section class="featured">
+      <div class="featured__wrapper">
       <h2 class="featured__title">Товар недели</h2>
       <h3 class="featured__title-item">Вязаные корзинки</h3>
       <p class="featured__description">
@@ -71,8 +73,10 @@
       <img src="https://via.placeholder.com/260x315" width="260" height="315" alt="Корзина среднего размера" />
       <p class="featured__price">Цена: 990 руб.</p>
       <a class="button featured__button" type="submit">Заказать</a>
+    </div>
     </section>
     <section class="about">
+      <div class="about__wrapper">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list">
         <li class="about__item">
@@ -96,9 +100,9 @@
       </ul>
     </section>
     <section class="reviews">
+      <div class="reviews__wrapper">
       <h2 class="reviews__title">Отзывы</h2>
       <blockquote class="reviews__item">
-        <div class="reviews__author-info">
           <p class="reviews__text">
             Я молодая мама, но всё равно фотографии не набирали и близко
             такого количества лайков, как у популярных инстамамочек. В
@@ -108,33 +112,42 @@
           </p>
           <cite class="reviews__author-name">Анастасия Красильникова</cite>
           <cite class="reviews__author-nickname">@misssssiskras</cite>
-        </div>
       </blockquote>
       <div class="reviews__toggles">
-        <button class="reviews__button--left" type="button">
+        <button class="reviews__toggle reviews__toggle--left" type="button">
           <span class="visually-hidden">Листать влево</span>
         </button>
-        <button class="reviews__button--right" type="button">
+        <button class="reviews__toggle reviews__toggle--right" type="button">
           <span class="visually-hidden">Листать вправо</span>
         </button>
       </div>
       <a class="reviews__button" href="#">Написать</a>
+    </div>
+  </div>
     </section>
     <section class="contacts">
+      <div class="contacts__wrapper">
       <h2 class="contacts__title">Контакты</h2>
       <ul class="contacts__list">
-        <li class="contacts__item">e-mail: <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></li>
-        <li class="contacts__item">адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</li>
+        <li class="contacts__item"><span class="contacts__option">e-mail:</span> <span class="contacts__description"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span></li>
+        <li class="contacts__item"><span class="contacts__option">адрес:</span> <span class="contacts__description">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span></li>
       </ul>
+    </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.32085871635451!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1595331984973!5m2!1sru!2sru"
-        width="302" height="457" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+        width="100%" height="457" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"
         title="Магазин находится по адресу:г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
       </iframe>
+      <div class="contacts__wrapper">
       <a class="contacts__button" href="#">Напишите нам</a>
+    </div>
     </section>
   </main>
   <footer class="page-footer">
+<div class="page-footer__wrapper">
+  <a class="logo logo--footer">
+    <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Mishka»" />
+  </a>
     <ul class="social">
       <li class="social__item">
         <a class="social__link social__link--instagram" href="#">Инстаграм</a>
@@ -152,6 +165,7 @@
         title="Перейти на сайт HTML Academy"><img src="img/logo-htmlacademy.svg" width="27" height="34"
           alt="Логотип HTML Academy" /></a>
     </div>
+  </div>
   </footer>
 </body>
 
