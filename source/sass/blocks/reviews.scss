@@ -1,9 +1,19 @@
 .reviews__wrapper {
   @include wrapper;
+  margin-top: 57px;
 }
 
 .reviews__title {
   @include font(25px, 30px, 700);
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px, 700);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px, 700);
+  }
 }
 
 .reviews__item {
@@ -13,8 +23,8 @@
 
 .reviews__text {
   @include font(15px, 30px, 400);
-  padding-top: 14px;
   padding-bottom: 33px;
+  margin: 0;
 }
 
 .reviews__author-name {
@@ -30,7 +40,7 @@
   grid-template-columns: 1fr 1fr;
   height: 52px;
   margin-right: 0;
-  margin-bottom: 55px;
+  margin-bottom: 38px;
 }
 
 .reviews__toggle {

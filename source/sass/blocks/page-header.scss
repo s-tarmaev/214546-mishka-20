@@ -1,10 +1,35 @@
 .page-header {
-  @include font (17px, 24px, 700);
-  display: flex;
-  flex-direction: column;
-  background-color: $white;
+  position: relative;
+  @include font(17px, 24px, 700);
+  // display: flex;
+  // flex-direction: column;
+  width: auto;
+  min-height: 79px;
   color: $black;
+  background-color: $white;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: $light-gray;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    max-height: 89px;
+  }
+}
+
+.page-header__wrapper {
+  @media (min-width: $tablet-width) {
+    @include wrapper;
+    position: relative;
+  }
+}
+
+.page-header__delivery {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 24px, 400);
+    display: inline-block;
+    color: $gray;
+  }
 }

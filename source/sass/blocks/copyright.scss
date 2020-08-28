@@ -1,5 +1,28 @@
-.copyright__text {
-  @include font (19px, 18px, 700);
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 222px;
 }
 
-// .copyright__link {}
+.copyright__text {
+  @include font(19px, 18px, 700);
+  text-align: left;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  margin: 0;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.copyright__link {
+  padding-top: 22px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.copyright__link img {
+  width: 27px;
+  height: 34px;
+}

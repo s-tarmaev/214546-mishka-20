@@ -1,12 +1,53 @@
 .site-list {
-  margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .site-list__item {
-  @include font (17px, 24px, 700);
-  padding-top: 29px;
-  padding-bottom: 27px;
+  padding-right: 30px;
+  padding-left: 30px;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: $light-gray;
+
+  @media (min-width: $tablet-width) {
+    width: 25%;
+    padding: 0;
+  }
+
+  &--catalog {
+    @media (min-width: $tablet-width) {
+      order: 3;
+    }
+  }
+
+  &--knitting {
+    @media (min-width: $tablet-width) {
+      order: 4;
+    }
+  }
+}
+
+.site-list__link {
+  @include font(17px, 24px, 700);
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 24px, 700);
+    padding-top: 19px;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }

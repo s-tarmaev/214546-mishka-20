@@ -10,10 +10,9 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    align-items: baseline;
     justify-content: space-between;
     padding-top: 51px;
     padding-bottom: 58px;
   }
 }
-
-// .page-footer__copyright {}

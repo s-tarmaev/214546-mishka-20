@@ -1,26 +1,137 @@
 .about__wrapper {
   @include wrapper;
-  margin-top: 31px;
+  margin-top: 74px;
 }
 
 .about__title {
-  @include font (25px, 30px, 700);
+  @include font(25px, 30px, 700);
   padding: 0;
   margin-bottom: 82px;
+
+  @media (min-width: $tablet-width) {
+    @include font(43px, 50px, 700);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font(53px, 57px, 700);
+    margin-top: 68px;
+    margin-right: 175px;
+    margin-bottom: 95px;
+    margin-left: 175px;
+  }
 }
 
 .about__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 350px;
+    margin-top: 68px;
+    margin-right: 175px;
+    margin-bottom: 95px;
+    margin-left: 175px;
+  }
 }
 
 .about__item {
-  margin-bottom: 82px;
-}
+  position: relative;
 
-.about__item:last-child {
-  margin-bottom: 58px;
+  &:not(:last-child) {
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 350px;
+  }
 }
 
 .about__text {
-  @include font (17px, 20px, 700);
+  @include font(17px, 20px, 700);
+}
+
+.about__icon {
+  &--flower {
+    position: absolute;
+    bottom: 56px;
+    left: 7px;
+    width: 32px;
+    height: 37px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
+
+  &--money {
+    position: absolute;
+    bottom: 66px;
+    left: 0;
+    width: 47px;
+    height: 27px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
+
+  &--heart {
+    position: absolute;
+    bottom: 61px;
+    left: 7px;
+    width: 34px;
+    height: 27px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
+
+  &--ball {
+    position: absolute;
+    bottom: 57px;
+    left: 4px;
+    width: 35px;
+    height: 34px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
+
+  &--rocket {
+    position: absolute;
+    bottom: 66px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
+
+  &--gift {
+    position: absolute;
+    bottom: 60px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
+    fill: $green-left;
+
+    @media (min-width: $tablet-width) {
+      bottom: 67px;
+    }
+  }
 }
