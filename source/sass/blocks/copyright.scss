@@ -6,6 +6,10 @@
   @media (min-width: $tablet-width) {
     width: 33%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
+  }
 }
 
 .copyright__text {
@@ -20,6 +24,10 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 

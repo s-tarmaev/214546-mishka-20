@@ -11,6 +11,10 @@
   padding-left: 31px;
   padding-right: 36px;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 37px;
+  }
+
   &--left {
     background-color: $green-left;
   }

@@ -10,6 +10,7 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: $light-gray;
+  margin: 0 auto;
   z-index: 1;
 
   @media (min-width: $tablet-width) {
@@ -18,6 +19,8 @@
 }
 
 .page-header__wrapper {
+  margin: 0 auto;
+  
   @media (min-width: $tablet-width) {
     @include wrapper;
     position: relative;
@@ -29,6 +32,9 @@
 
   @media (min-width: $tablet-width) {
     @include font(15px, 24px, 400);
+    position: absolute;
+    bottom: 6px;
+    right: 0;
     display: inline-block;
     color: $gray;
   }

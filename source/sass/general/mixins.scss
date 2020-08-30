@@ -43,11 +43,12 @@
 
 @mixin wrapper {
   margin: 0 30px;
-  
+
   @media (min-width: $tablet-width) {
     margin: 0 50px;
   }
   @media (min-width: $desktop-width) {
-    max-width: 1150px;
+    margin: 0 auto;
+    max-width: 1050px;
   }
 }

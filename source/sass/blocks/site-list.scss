@@ -11,21 +11,55 @@
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: $light-gray;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
     width: 25%;
     padding: 0;
+    border-top: none;
   }
 
   &--catalog {
     @media (min-width: $tablet-width) {
       order: 3;
     }
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+      width: 185px;
+      height: 89px;
+      border-right-width: 1px;
+      border-right-style: solid;
+      border-right-color: $light-gray;
+    }
   }
 
   &--knitting {
     @media (min-width: $tablet-width) {
       order: 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+    }
+  }
+
+  &--new {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      order: 5;
+      width: 185px;
+    }
+  }
+
+  &--sale {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      order: 6;
     }
   }
 }
@@ -44,10 +78,39 @@
     padding-left: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    @include font(17px, 24px, 700);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
   &:hover {
     opacity: 0.6;
   }
   &:active {
     opacity: 0.3;
+  }
+
+  &--knitting {
+    @media (min-width: $desktop-width) {
+      padding-left: 35px;
+    }
+  }
+
+  &--new {
+    @media (min-width: $desktop-width) {
+      @include font(15px, 24px, 700);
+      padding-top: 19px;
+      padding-bottom: 19px;
+    }
+  }
+
+  &--sale {
+    @media (min-width: $desktop-width) {
+      @include font(15px, 24px, 700);
+      padding-top: 19px;
+      padding-bottom: 19px;
+      padding-left: 35px;
+    }
   }
 }

@@ -16,9 +16,9 @@
 
   @media (min-width: $desktop-width) {
     @include font(53px, 57px, 700);
-    margin-top: 68px;
+    margin-top: 105px;
     margin-right: 175px;
-    margin-bottom: 95px;
+    margin-bottom: 75px;
     margin-left: 175px;
   }
 }
@@ -28,20 +28,15 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    // grid-template-rows: 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 350px;
-    margin-top: 68px;
     margin-right: 175px;
-    margin-bottom: 95px;
     margin-left: 175px;
+    margin-bottom: 8px;
   }
 }
 

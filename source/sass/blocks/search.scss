@@ -1,18 +1,22 @@
 .search {
   position: relative;
-  order: 1;
+
 
   @media (min-width: $tablet-width) {
+    order: 1;
     width: 83px;
-
     border-left-width: 1px;
     border-left-style: solid;
     border-left-color: $light-gray;
     border-right-width: 1px;
     border-right-style: solid;
     border-right-color: $light-gray;
-    margin: auto;
     margin-left: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    margin-left: 254px;
   }
 }
 

@@ -15,6 +15,12 @@
       top: 0;
       left: 0;
     }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 43%;
+    }
   }
 
   &--header img {
@@ -38,6 +44,10 @@
     }
     @media (min-width: $tablet-width) {
       width: 21%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 102px;
     }
   }
 

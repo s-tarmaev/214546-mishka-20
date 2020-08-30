@@ -1,14 +1,18 @@
 .cart-list {
   position: relative;
-  order: 2;
 
   @media (min-width: $tablet-width) {
+    order: 2;
     width: 265px;
     text-align: right;
     height: 89px;
     justify-self: center;
     align-self: center;
     vertical-align: middle;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 4;
   }
 
   &:hover a {
