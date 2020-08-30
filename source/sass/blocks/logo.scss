@@ -33,6 +33,7 @@
       width: 113px;
       height: 89px;
     }
+
     @media (min-width: $desktop-width) {
       width: 149px;
     }
@@ -42,6 +43,7 @@
     @media (max-width: $mobile-width) {
       display: none;
     }
+
     @media (min-width: $tablet-width) {
       width: 21%;
     }

@@ -112,8 +112,8 @@
 }
 
 .reviews__author-name {
-  display: block;
   @include font(17px, 24px, 700);
+  display: block;
 
   @media (min-width: $tablet-width) {
     @include font(18px, 24px, 700);
@@ -175,11 +175,11 @@
   }
 
   &--left {
-    background-image: url(../img/icon-left-arrow.svg);
+    background-image: url("../img/icon-left-arrow.svg");
   }
 
   &--right {
-    background-image: url(../img/icon-right-arrow.svg);
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }
 

@@ -18,8 +18,8 @@
 }
 
 @mixin button {
-  display: block;
   @include font(17px, 16px, 700);
+  display: block;
   text-align: center;
   text-transform: uppercase;
   padding-top: 16px;
@@ -47,6 +47,7 @@
   @media (min-width: $tablet-width) {
     margin: 0 50px;
   }
+
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     max-width: 1050px;

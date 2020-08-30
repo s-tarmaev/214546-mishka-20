@@ -3,6 +3,7 @@
     margin-bottom: 105px;
   }
 }
+
 .contacts__wrapper {
   @media (min-width: $desktop-width) {
     @include wrapper;
@@ -26,7 +27,6 @@
   margin-bottom: 5px;
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 4;
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(3, 175px);
@@ -104,8 +104,8 @@
 }
 
 .contacts__cell {
-  display: table-cell;
   @include font(15px, 30px, 400);
+  display: table-cell;
   color: $gray;
   padding-bottom: 30px;
 

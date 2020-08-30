@@ -75,8 +75,8 @@
 }
 
 .featured__title-item {
-  order: -1;
   @include font(25px, 30px, 700);
+  order: -1;
   margin: 0;
   margin-bottom: 3px;
 
@@ -169,20 +169,31 @@
 }
 
 .featured__wrapper picture {
-  width: 260px;
+  // .featured__image {
+  // width: 260px;
 
   @media (min-width: $tablet-width) {
     grid-row: 2 / -1;
     grid-column: 3 / 5;
-    width: 334px;
-    height: 404px;
+    // width: 334px;
+    // height: 404px;
   }
 
   @media (min-width: $desktop-width) {
     grid-row: 1 / -1;
     grid-column: 4 / 7;
+  }
+}
+
+.featured__image {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 525px;
-    height: 636px;
     padding-top: 30px;
   }
 }
