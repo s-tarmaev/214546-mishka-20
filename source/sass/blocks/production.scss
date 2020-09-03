@@ -1,7 +1,19 @@
-// .production {}
+.production {
+  margin-bottom: 58px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 104px;
+  }
+}
 
 .production__wrapper {
   @include wrapper;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $light-gray;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -14,14 +26,53 @@
       "a a b"
       "a a c"
       "a a d";
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 155px 150px 150px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .production__title {
   @include font(17px, 24px, 700);
-  grid-area: b;
+  position: relative;
+  padding-left: 90px;
+  margin-top: 22px;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+    bottom: 12px;
+    left: 33px;
+    width: 32px;
+    height: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 24px, 700);
+    padding-left: 106px;
+    margin-top: 38px;
+    margin-bottom: 24px;
+
+    &::before {
+      bottom: 4px;
+      left: 41px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: b;
+    padding-top: 58px;
+    padding-right: 60px;
+    padding-left: 62px;
+    margin-bottom: 26px;
+
+    &::before {
+      top: 3px;
+      left: 63px;
+    }
+  }
 }
 
 .production__video {
@@ -30,34 +81,63 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 680px;
-    height: 455px;
     grid-area: a;
     padding-right: 17px;
+  }
+
+  & img {
+    width: 260px;
+
+    @media (min-width: $tablet-width) {
+      width: 668px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+      width: 683px;
+    }
   }
 }
 
 .production__text {
   @include font(13px, 24px, 400);
-  margin-bottom: 41px;
+  padding-left: 34px;
+  margin-top: 32px;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 30px, 400);
+    padding-left: 40px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-area: c;
+    padding-left: 62px;
+    margin-top: 16px;
   }
 }
 
 .production__button {
-  @include font(17px, 16px, 700);
-  @include button();
-  margin-bottom: 109px;
+  @include button;
+  @include font(18px, 16px, 700);
+  width: 192px;
+  margin: auto;
+  margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 584px;
+    margin: auto;
+    margin-bottom: 43px;
   }
 
   @media (min-width: $desktop-width) {
+    @include font(17px, 16px, 700);
+    // align-self: start;
     max-width: 230px;
     grid-area: d;
+    margin-left: 64px;
+    margin-bottom: 60px;
   }
 }

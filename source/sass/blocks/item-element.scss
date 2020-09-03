@@ -1,0 +1,115 @@
+.item-element {
+  margin-top: 30px;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: $light-gray;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.item-element img {
+  width: 260px;
+  display: block;
+  // height: 195px;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    // width: 316px;
+    height: 462px;
+    padding-top: 0;
+  }
+}
+
+.item-element__wrapper {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $light-gray;
+  // margin-left: 28px;
+  // margin-right: 27px;
+  padding-left: 28px;
+  padding-right: 27px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 197px;
+    padding-left: 28px;
+  }
+}
+
+.item-element__title {
+  @include font(17px, 24px, 700);
+  margin-top: 28px;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    @include font(20px, 24px, 700);
+    padding-right: 30px;
+    margin-top: 28px;
+  }
+}
+
+.item-element__description {
+  @include font(13px, 30px, 400);
+  margin: 0;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    @include font(15px, 30px, 400);
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+
+.item-element__purchase-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $light-gray;
+
+  align-content: flex-end;
+}
+
+.item-element__price {
+  @include font(15px, 24px, 700);
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+
+  @media (min-width: $tablet-width) {
+    @include font(17px, 24px, 700);
+  }
+}
+
+.item-element__purchase-button {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  fill: $gray2;
+
+  &:hover {
+    fill: $green-right-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
