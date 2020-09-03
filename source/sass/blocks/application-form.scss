@@ -11,6 +11,7 @@
   padding: 0;
   margin: 0;
   margin-bottom: 17px;
+
   @media (min-width: $tablet-width) {
     border: none;
   }
@@ -29,6 +30,7 @@
   color: $green-left;
   padding-right: 18px;
   margin-left: 0;
+
   @media (min-width: $tablet-width) {
     padding-top: 15px;
   }
@@ -45,9 +47,11 @@
 
 .application-form__option {
   @include font(17px, 24px, 700);
+
   & label {
     padding-right: 25px;
   }
+
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: baseline;
@@ -61,8 +65,10 @@
   border-style: solid;
   border-color: $black;
   margin-top: 22px;
+
   &::placeholder {
     @include font(17px, 18px, 400);
+
     @media (min-width: $desktop-width) {
       color: $gray;
     }
@@ -72,15 +78,17 @@
 .application-form__annotation {
   @include font(14px, 16px, 400);
   color: $gray;
+
   @media (min-width: $tablet-width) {
     text-align: right;
   }
 }
 
 .application__button {
-  @include button();
+  @include button;
   width: 100%;
   margin-top: 30px;
+
   @media (min-width: $tablet-width) {
     width: 230px;
   }

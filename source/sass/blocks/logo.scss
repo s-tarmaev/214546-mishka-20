@@ -1,30 +1,62 @@
 .logo {
-  text-align: center;
+  &--header {
+    min-height: 79px;
 
-  &--footer {
-    display: none;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      opacity: 0.3;
+    }
 
     @media (min-width: $tablet-width) {
-      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 0;
+      left: 43%;
     }
   }
 
-  &:hover {
-    opacity: 0.6;
+  &--header img {
+    display: block;
+    margin: 0 auto;
+    width: 86px;
+    height: 79px;
+
+    @media (min-width: $tablet-width) {
+      width: 113px;
+      height: 89px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 149px;
+    }
   }
 
-  &:focus {
-    opacity: 0.3;
+  &--footer {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 21%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 102px;
+    }
   }
 
-  // @media (min-width: $tablet-width) {}
-  // @media (min-width: $desktop-width) {}
-}
-
-.logo img {
-  width: 86px;
-  height: 79px;
-
-  // @media (min-width: $tablet-width) {}
-  // @media (min-width: $desktop-width) {}
+  &--footer img {
+    @media (min-width: $tablet-width) {
+      width: 102px;
+      height: 34px;
+    }
+  }
 }

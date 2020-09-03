@@ -11,9 +11,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 51px;
-    padding-bottom: 58px;
+    padding-top: 26px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
   }
 }
-
-// .page-footer__copyright {}

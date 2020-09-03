@@ -1,34 +1,89 @@
 .goods-list {
-  @include wrapper;
-  background: linear-gradient(to bottom, $green-left 50%, $green-right 50%);
+  // background: linear-gradient(to bottom, $green-left 50%, $green-right 50%);
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: linear-gradient(to right, transparent 50px, $green-left 50px, $green-left 50%, $green-right 50%, $green-left 1100px, transparent 1100px);
   }
 }
 
 .goods-list__item {
-  @include font (19px, 24px, 700);
-  padding-top: 24px;
-  padding-bottom: 31px;
+  padding-left: 31px;
+  padding-right: 36px;
 
-  & a {
-    width: 100%;
-    padding-top: 24px;
-    padding-bottom: 31px;
-    padding-left: 30px;
-    color: $white;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 25px;
-      padding-bottom: 34px;
-      padding-left: 36px;
-    }
+  @media (min-width: $desktop-width) {
+    padding-left: 37px;
   }
 
+  &--left {
+    background-color: $green-left;
+  }
+
+  &--left:hover {
+    background-color: $green-left-hover;
+  }
+
+  &--right {
+    background-color: $green-right;
+  }
+
+  &--right:hover {
+    background-color: $green-right-hover;
+  }
+}
+
+.goods-list__item-wrapper {
+  position: relative;
+
+  // &--left {}
+  // &--right {}
+}
+
+.goods-list__link {
+  @include font(19px, 24px, 700);
+  display: block;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 31px;
+  color: $white;
+
   @media (min-width: $tablet-width) {
-    color: transparent;
+    @include font(20px, 30px, 700);
+    padding-top: 25px;
+    padding-bottom: 34px;
+  }
+
+  &--interior::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    top: 25px;
+    right: 0;
+    width: 40px;
+    height: 62px;
+    opacity: 0.5;
+  }
+
+  &--toy::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    top: 22px;
+    right: -9px;
+    width: 61px;
+    height: 61px;
+    opacity: 0.5;
+  }
+
+  &--interior:hover::after,
+  &--toy:hover::after {
+    opacity: 0.7;
+  }
+
+  &--interior:active::after,
+  &--toy:active::after {
+    opacity: 0.3;
   }
 }

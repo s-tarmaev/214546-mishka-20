@@ -1,33 +1,83 @@
 .main-nav {
   width: 100%;
-}
 
-.main-nav__wrapper {
-  @include wrapper;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.main-nav__toggle {
-  display: none;
-  @include bordernone;
-  width: 21px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url(../../img/icon-menu-close.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 21px 20px;
-
-  @media (min-width: $tablet-width) {
+  &--nojs {
     display: none;
   }
 }
 
 .main-nav__list {
   @include reset-list;
-  width: 100%;
+}
+
+.main-nav__toggle {
+  @include bordernone;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 5px 0 0 $black, 0 10px 0 0 $black;
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 4px;
+    width: 30px;
+    height: 2px;
+    background: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
 }

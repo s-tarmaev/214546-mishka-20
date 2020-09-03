@@ -1,2 +1,57 @@
-// .cart-list {}
-// .cart-list__empty {}
+.cart-list {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    width: 265px;
+    text-align: right;
+    height: 89px;
+    justify-self: center;
+    align-self: center;
+    vertical-align: middle;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 4;
+  }
+
+  &:hover a {
+    opacity: 0.6;
+  }
+
+  &:hover svg {
+    opacity: 1;
+    fill: $green-left;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.cart-list__icon {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+  width: 21px;
+  height: auto;
+  opacity: 0.2;
+  fill: $black;
+
+  @media (min-width: $tablet-width) {
+    top: 32px;
+  }
+}
+
+.cart-list__link {
+  @include font(17px, 24px, 700);
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
