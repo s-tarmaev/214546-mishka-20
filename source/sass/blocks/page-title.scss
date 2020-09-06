@@ -8,9 +8,33 @@
 
   @media (min-width: $tablet-width) {
     @include font (43px, 50px, 700);
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 136px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: 770px;
+      background-repeat: repeat-x;
+      bottom: -11px;
+      left: 0;
+      width: 770px;
+      height: 34px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include font (53px, 57px, 700);
+    padding-bottom: 166px;
+
+    &::after {
+      background-size: 1150px;
+      width: 2300px;
+      height: 45px;
+      left: -49px;
+      bottom: -15px;
+    }
   }
 }

@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Academy: Мишка</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="logo logo--header">
+      <a class="logo logo--header" href="index.html">
         <picture>
-          <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg" />
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
           <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Mishka»" />
         </picture>
       </a>
@@ -51,8 +51,7 @@
               <path
                 d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z" />
             </svg>
-            <a class="cart-list__link" href="#">
-              Корзина: пока пуста</a>
+            <a class="cart-list__link" href="#"> Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -63,111 +62,115 @@
     <section class="application">
       <h1 class="page-title">Вязание на заказ</h1>
       <div class="application__wrapper">
-      <p class="application__text">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
-        форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-      </p>
-      <form class="application-form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">Тип</legend>
-          <ul class="application-form__list">
-            <li class="application-form__option application-radio">
-              <input class="visually-hidden application-radio__input" type="radio" name="type"
-                value="accessory" id="application-accessory" checked />
-              <label class="application-radio__label" for="application-accessory">Аксессуар для интерьера</label>
-            </li>
-            <li class="application-form__option application-radio">
-              <input class="visually-hidden application-radio__input" type="radio" name="type"
-                value="toy" id="application-toy">
-              <label class="application-radio__label" for="application-toy">Детская игрушка</label>
-            </li>
-          </ul>
-        </div>
-        </fieldset>
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">Цвет</legend>
-          <ul class="application-form__list application-form__list--wrap">
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-white" id="application-white" checked />
-              <label class="application-checkbox__label" for="application-white">Белый</label>
-            </li>
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-gray" id="application-gray" checked />
-              <label class="application-checkbox__label" for="application-gray">Серый</label>
-            </li>
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-tiffany" id="application-tiffany" />
-              <label class="application-checkbox__label" for="application-tiffany">«Тиффани»</label>
-            </li>
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-black" id="application-black" />
-              <label class="application-checkbox__label" for="application-black">Черный</label>
-            </li>
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-pink" id="application-pink" />
-              <label class="application-checkbox__label" for="application-pink">Розовый</label>
-            </li>
-            <li class="application-form__option application-checkbox">
-              <input class="visually-hidden application-checkbox__input" type="checkbox"
-                name="color-orange" id="application-orange" />
-              <label class="application-checkbox__label" for="application-orange">Оранжевый</label>
-            </li>
-          </ul>
-        </div>
-        </fieldset>
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">ФИО</legend>
-          <ul class="application-form__list">
-            <li class="application-form__option">
-              <label for="name">Имя:</label>
-              <input class="application-name" id="name" type="text" name="name" placeholder="Введите ваше имя*" />
-            </li>
-            <li class="application-form__option">
-              <label for="surname">Фамилия:</label>
-              <input class="application-name" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" />
-            </li>
-            <li class="application-form__option">
-              <label for="middle-name">Отчество:</label>
-              <input class="application-name" id="middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете" />
-            </li>
-          </ul>
-        </div>
-        </fieldset>
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">Тел</legend>
-          <label class="visually-hidden" for="telephone">Укажите телефон</label>
-          <input class="application-name" id="telephone" type="tel" name="telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" />
-        </div>
-        </fieldset>
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">E-mail</legend>
-          <label class="visually-hidden" for="telephone">Укажите электронную почту</label>
-          <input class="application-name" id="email" type="email" name="email" placeholder="Ваш Email*" />
-        </div>
-        </fieldset>
-        <fieldset class="application-form__item">
-          <div class="application-form__wrapper">
-          <legend class="application-form__legend">Доп</legend>
-          <label class="visually-hidden" for="wishes">Пожелания к заказу</label>
-          <textarea class="application-form__textarea" name="wishes" id="wishes" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-        </div>
-        </fieldset>
-        <small class="application-form__annotation">*Поля обязательны для заполнения</small>
-        <button class="application__button" type="submit">
-          Отправить заказ
-        </button>
-      </form>
-    </div>
+        <p class="application__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+          форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <form class="application-form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="application-form__item radio">
+            <div class="application-form__wrapper">
+              <legend class="radio__legend">Тип</legend>
+              <ul class="radio__list">
+                <li class="radio__option">
+                  <input class="visually-hidden radio__input" type="radio" name="type" value="accessory"
+                    id="application-accessory" checked />
+                  <label class="radio__label" for="application-accessory">Аксессуар для интерьера</label>
+                </li>
+                <li class="radio__option">
+                  <input class="visually-hidden radio__input radio__input--line" type="radio" name="type" value="toy"
+                    id="application-toy" />
+                  <label class="radio__label" for="application-toy">Детская игрушка</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <fieldset class="application-form__item checkbox">
+            <div class="application-form__wrapper">
+              <legend class="checkbox__legend">Цвет</legend>
+              <ul class="checkbox__list checkbox__list">
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-white" id="white"
+                    checked />
+                  <label class="checkbox__label" for="white">Белый</label>
+                </li>
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-gray" id="gray" checked />
+                  <label class="checkbox__label" for="gray">Серый</label>
+                </li>
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-tiffany" id="tiffany" />
+                  <label class="checkbox__label" for="tiffany">«Тиффани»</label>
+                </li>
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-black" id="black" />
+                  <label class="checkbox__label" for="black">Черный</label>
+                </li>
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-pink" id="pink" />
+                  <label class="checkbox__label" for="pink">Розовый</label>
+                </li>
+                <li class="checkbox__option">
+                  <input class="visually-hidden checkbox__input" type="checkbox" name="color-orange" id="orange" />
+                  <label class="checkbox__label" for="orange">Оранжевый</label>
+                </li>
+              </ul>
+              <!-- </div> -->
+          </fieldset>
+          <fieldset class="application-form__item client-name">
+            <div class="application-form__wrapper">
+              <legend class="client-name__legend">ФИО</legend>
+              <ul class="client-name__list">
+                <li class="client-name__option">
+                  <label class="client-name__label" for="name">Имя:</label>
+                  <input class="client-name__input" id="name" type="text" name="name" placeholder="Введите ваше имя*" />
+                </li>
+                <li class="client-name__option">
+                  <label class="client-name__label" for="surname">Фамилия:</label>
+                  <input class="client-name__input" id="surname" type="text" name="surname"
+                    placeholder="Укажите фамилию*" />
+                </li>
+                <li class="client-name__option">
+                  <label class="client-name__label" for="middle-name">Отчество:</label>
+                  <input class="client-name__input" id="middle-name" type="text" name="middle-name"
+                    placeholder="Отчество, если желаете" />
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <div class="application-form__wrapper--contacts">
+            <fieldset class="application-form__item client-contacts">
+              <div class="application-form__wrapper">
+                <legend class="client-contacts__legend">Тел</legend>
+                <label class="visually-hidden" for="telephone">Укажите телефон</label>
+                <input class="client-contacts__input client-contacts__input--phone" id="telephone" type="tel"
+                  name="telephone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" />
+              </div>
+            </fieldset>
+            <fieldset class="application-form__item client-contacts">
+              <div class="application-form__wrapper">
+                <legend class="client-contacts__legend">E-mail</legend>
+                <label class="visually-hidden" for="telephone">Укажите электронную почту</label>
+                <input class="client-contacts__input client-contacts__input--mail" id="email" type="email" name="email"
+                  placeholder="Ваш Email*" />
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="application-form__item wishes">
+            <div class="application-form__wrapper">
+              <legend class="wishes__legend">Доп</legend>
+              <label class="visually-hidden" for="wishes">Пожелания к заказу</label>
+              <textarea class="wishes__textarea" name="wishes" id="wishes"
+                placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+          </fieldset>
+          <div class="application-form__wrapper--submit">
+            <small class="application-form__annotation">*Поля обязательны для заполнения</small>
+            <button class="application-form__button" type="submit">
+              Отправить заказ
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -231,18 +234,18 @@
     </div>
   </footer>
   <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
+    var navMain = document.querySelector(".main-nav");
+    var navToggle = document.querySelector(".main-nav__toggle");
 
-    navMain.classList.remove('main-nav--nojs');
+    navMain.classList.remove("main-nav--nojs");
 
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+    navToggle.addEventListener("click", function () {
+      if (navMain.classList.contains("main-nav--closed")) {
+        navMain.classList.remove("main-nav--closed");
+        navMain.classList.add("main-nav--opened");
       } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add("main-nav--closed");
+        navMain.classList.remove("main-nav--opened");
       }
     });
   </script>
