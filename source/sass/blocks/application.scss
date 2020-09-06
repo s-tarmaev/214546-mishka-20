@@ -7,13 +7,16 @@
 .application__text {
   @include font(13px, 24px, 400);
   margin-top: 17px;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 
   @media (min-width: $tablet-width) {
     @include font(17px, 30px, 400);
+    margin-top: 56px;
   }
-}
 
-.application__button {
-  @include button();
+  @media (min-width: $desktop-width) {
+    padding-left: 175px;
+    padding-right: 175px;
+    margin-top: 105px;
+  }
 }

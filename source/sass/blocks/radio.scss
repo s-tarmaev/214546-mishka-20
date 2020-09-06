@@ -1,0 +1,112 @@
+// .radio {}
+
+.radio__legend {
+  @include font(17px, 16px, 700);
+  text-transform: uppercase;
+  color: $green-left;
+  padding-right: 23px;
+  margin-left: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.radio__list {
+  @include reset-list;
+  margin-top: 36px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    margin-bottom: 40px;
+  }
+}
+
+.radio__option {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.radio__input {
+  & + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $gray;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 50px;
+      height: 50px;
+      left: 2px;
+      top: -16px;
+    }
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background-color: $background-green-color;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+      left: 19px;
+      top: 0;
+    }
+  }
+
+  &--line {
+    & + label::before {
+      left: 0;
+      top: -11px;
+
+      @media (min-width: $tablet-width) {
+        left: 3px;
+        top: -17px;
+      }
+    }
+
+    &:checked + label::after {
+      top: 1px;
+      left: 12px;
+
+      @media (min-width: $tablet-width) {
+        left: 19px;
+        top: -1px;
+      }
+    }
+  }
+}
+
+.radio__label {
+  @include font(17px, 18px, 700);
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 60px;
+
+  @media (min-width: $tablet-width) {
+    @include font(19px, 18px, 700);
+    padding-left: 80px;
+  }
+}
