@@ -94,7 +94,6 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
-
   @media (min-width: $tablet-width) {
     @include font(17px, 24px, 700);
   }
@@ -103,6 +102,9 @@
 .item-element__purchase-button {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.item-element__purchase-icon {
   fill: $gray2;
 
   &:hover {

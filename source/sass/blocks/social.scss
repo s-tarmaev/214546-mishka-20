@@ -29,34 +29,16 @@
   padding-right: 20px;
   padding-bottom: 23px;
   padding-left: 20px;
+}
 
-  &--instagram {
-    &:hover {
-      fill: $green-right-hover;
-    }
+.social__icon {
+  fill: $black;
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:hover {
+    fill: $green-right-hover;
   }
 
-  &--facebook {
-    &:hover {
-      fill: $green-right-hover;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--twitter {
-    &:hover {
-      fill: $green-right-hover;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
