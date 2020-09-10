@@ -2,10 +2,25 @@
 
 .radio__legend {
   @include font(17px, 16px, 700);
+  position: relative;
+  width: 100%;
   text-transform: uppercase;
   color: $green-left;
-  padding-right: 23px;
   margin-left: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $background-green-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 53px;
@@ -54,6 +69,14 @@
       left: 2px;
       top: -16px;
     }
+  }
+
+  & + label:hover::before {
+    border-color: $background-green-color;
+  }
+
+  & + label:active::before {
+    border-color: $black3;
   }
 
   &:checked + label::after {

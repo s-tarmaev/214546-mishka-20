@@ -42,6 +42,14 @@
   padding-left: 28px;
   padding-right: 27px;
 
+  &:hover {
+    box-shadow: 0px 6px 10px $black1;
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px $black1;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
@@ -58,6 +66,14 @@
   @include font(17px, 24px, 700);
   margin-top: 28px;
   margin-bottom: 4px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     @include font(20px, 24px, 700);

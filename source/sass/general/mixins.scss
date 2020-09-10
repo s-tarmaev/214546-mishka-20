@@ -42,14 +42,14 @@
 }
 
 @mixin wrapper {
-  margin: 0 30px;
+  margin: 0 auto;
+  max-width: 260px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 50px;
+    max-width: 668px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto;
     max-width: 1050px;
   }
 }

@@ -42,7 +42,14 @@
   }
 }
 
-.copyright__link img {
+.copyright__link-icon {
   width: 27px;
   height: 34px;
+
+  &:hover {
+    fill: $green-right-hover;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -92,9 +92,9 @@ exports.webp = createWebp;
 const svgstore = require("gulp-svgstore");
 const sprite = () => {
   return gulp
-    .src("source/img/**/icon-*.svg")
+    .src(["source/img/**/icon-*.svg", "source/img/logo-footer.svg", "source/img/logo-htmlacademy.svg"])
     .pipe(svgstore())
-    .pipe(rename("sprite-icon.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"));
 };
 exports.sprite = sprite;

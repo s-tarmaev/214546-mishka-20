@@ -12,10 +12,26 @@
 
 .client-name__legend {
   @include font(17px, 16px, 700);
+  position: relative;
+  width: 100%;
   text-transform: uppercase;
   color: $green-left;
   padding-right: 17px;
   margin-left: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $background-green-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 53px;
@@ -28,7 +44,7 @@
 
 .client-name__list {
   @include reset-list;
-  margin-top: 30px;
+  margin-top: 28px;
   margin-bottom: 33px;
 
   @media (min-width: $tablet-width) {
@@ -41,23 +57,31 @@
 }
 
 .client-name__option {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-bottom: 28px;
+    margin-bottom: 22px;
   }
 }
 
 .client-name__input {
+  @include font(17px, 18px, 400);
   display: block;
   width: 100%;
   border: none;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: $black;
-  padding-top: 16px;
-  padding-bottom: 14px;
+  padding-top: 19px;
+  padding-bottom: 13px;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    @include font(19px, 18px, 400);
+    padding-top: 12px;
+  padding-bottom: 13px;
+  }
 
   &::placeholder {
     @include font(17px, 18px, 400);
@@ -66,5 +90,9 @@
       @include font(19px, 18px, 400);
       padding-left: 15px;
     }
+  }
+
+  &:hover {
+    border-bottom-color: $background-green-color;
   }
 }

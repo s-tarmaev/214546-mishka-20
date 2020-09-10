@@ -1,13 +1,33 @@
 .wishes {
   margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+  }
 }
 
 .wishes__legend {
   @include font(17px, 16px, 700);
+  position: relative;
+  width: 100%;
   text-transform: uppercase;
   color: $green-left;
-  padding-right: 15px;
+  // padding-right: 15px;
   margin-left: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $background-green-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 42px;
@@ -15,6 +35,7 @@
 }
 
 .wishes__textarea {
+  @include font(17px, 18px, 400);
   width: 100%;
   height: 143px;
   padding: 17px;
@@ -24,6 +45,11 @@
   border-color: $black;
   margin-top: 22px;
   margin-bottom: 13px;
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    @include font(19px, 18px, 400);
+  }
 
   &::placeholder {
     @include font(17px, 18px, 400);
@@ -31,6 +57,10 @@
     @media (min-width: $tablet-width) {
       @include font(19px, 18px, 400);
     }
+  }
+
+  &:hover {
+    border-color: $background-green-color;
   }
 
   @media (min-width: $desktop-width) {

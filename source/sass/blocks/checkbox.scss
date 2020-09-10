@@ -20,6 +20,14 @@
     }
   }
 
+  & + label:hover::before {
+    border-color: $background-green-color;
+  }
+
+  & + label:active::before {
+    border-color: $black3;
+  }
+
   &:checked + label::after {
     content: "";
     position: absolute;
@@ -27,7 +35,7 @@
     left: 4px;
     width: 38px;
     height: 39px;
-    background-image: url("/img/icon-tick.svg");
+    background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-size: 31px 17px;
     background-position: 0 0;
@@ -42,10 +50,26 @@
 
 .checkbox__legend {
   @include font(17px, 16px, 700);
+  position: relative;
+  width: 100%;
   text-transform: uppercase;
   color: $green-left;
-  padding-right: 15px;
+  // padding-right: 15px;
   margin-left: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $background-green-color;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 35px;
