@@ -20,7 +20,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 };
 
@@ -31,7 +31,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "source",
+      baseDir: "build",
     },
     cors: true,
     notify: false,
@@ -56,20 +56,15 @@ exports.default = gulp.series(styles, server, watcher);
 // const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
 const images = () => {
-  return gulp
-    .src("source/img/**/*.{jpg,png,svg}")
-    .pipe(
-      imagemin([
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.mozjpeg({quality: 90, progressive: true}),
-        imagemin.svgo({
-          plugins: [
-              {removeViewBox: true},
-              {cleanupIDs: false}
-          ]
+  return gulp.src("source/img/**/*.{jpg,png,svg}").pipe(
+    imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ quality: 90, progressive: true }),
+      imagemin.svgo({
+        plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
       }),
-      ])
-    );
+    ])
+  );
 };
 exports.images = images;
 
@@ -92,9 +87,47 @@ exports.webp = createWebp;
 const svgstore = require("gulp-svgstore");
 const sprite = () => {
   return gulp
-    .src(["source/img/**/icon-*.svg", "source/img/logo-footer.svg", "source/img/logo-htmlacademy.svg"])
+    .src([
+      "source/img/**/icon-*.svg",
+      "source/img/logo-footer.svg",
+      "source/img/logo-htmlacademy.svg",
+    ])
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 };
 exports.sprite = sprite;
+
+// Copy
+
+const copy = () => {
+  return gulp
+    .src(
+      [
+        "source/fonts/**/*.{woff,woff2}",
+        "source/img/**",
+        "source/js/**",
+        "source/*.ico",
+      ],
+      {
+        base: "source",
+      }
+    )
+    .pipe(gulp.dest("build"));
+};
+exports.copy = copy;
+
+// Clean
+
+// const gulp = require("gulp");
+const del = require("del");
+const clean = () => {
+  return del("build");
+};
+exports.clean = clean;
+
+// Build
+// const gulp = require("gulp");
+
+const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
+exports.build = build;
