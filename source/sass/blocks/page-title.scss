@@ -1,5 +1,5 @@
 .page-title {
-  @include font (27px, 30px, 700);
+  @include font(27px, 30px, 700);
   background: $grayscale;
   text-align: center;
   height: 177px;
@@ -7,7 +7,7 @@
   padding-top: 73px;
 
   @media (min-width: $tablet-width) {
-    @include font (43px, 50px, 700);
+    @include font(43px, 50px, 700);
     position: relative;
     padding-top: 100px;
     padding-bottom: 136px;
@@ -26,7 +26,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include font (53px, 57px, 700);
+    @include font(53px, 57px, 700);
     padding-bottom: 166px;
 
     &::after {

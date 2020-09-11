@@ -1,6 +1,6 @@
 .featured {
   @media (min-width: $tablet-width) {
-    padding-bottom: 60px;
+    padding-bottom: 54px;
   }
 }
 
@@ -24,9 +24,9 @@
       background-image: url("../img/bg-zigzag-line.svg");
       background-size: 770px;
       background-repeat: repeat-x;
-      bottom: -95px;
+      bottom: -89px;
       right: -50px;
-      width: 770px;
+      width: 1540px;
       height: 40px;
     }
   }
@@ -38,7 +38,7 @@
       background-size: 1050px;
       width: 1050px;
       left: 0;
-      bottom: -115px;
+      bottom: -110px;
     }
   }
 }
@@ -169,14 +169,9 @@
 }
 
 .featured__wrapper picture {
-  // .featured__image {
-  // width: 260px;
-
   @media (min-width: $tablet-width) {
     grid-row: 2 / -1;
     grid-column: 3 / 5;
-    // width: 334px;
-    // height: 404px;
   }
 
   @media (min-width: $desktop-width) {
@@ -190,6 +185,7 @@
 
   @media (min-width: $tablet-width) {
     width: 334px;
+    padding-top: 10px;
   }
 
   @media (min-width: $desktop-width) {

@@ -10,7 +10,6 @@
   width: 100%;
   text-transform: uppercase;
   color: $green-left;
-  // padding-right: 27px;
   margin-left: 0;
 
   &::after {
@@ -18,7 +17,6 @@
     position: absolute;
     top: 8px;
     right: 0;
-    // width: 200px;
     height: 1px;
     background-color: $background-green-color;
 
@@ -79,7 +77,7 @@
 
   &--mail {
     margin-bottom: 12px;
-    
+
     @media (min-width: $tablet-width) {
       padding-top: 14px;
     }

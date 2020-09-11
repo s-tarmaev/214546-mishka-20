@@ -1,6 +1,4 @@
 .goods-list {
-  // background: linear-gradient(to bottom, $green-left 50%, $green-right 50%);
-
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -10,6 +8,11 @@
 .goods-list__item {
   padding-left: 31px;
   padding-right: 36px;
+
+  &:hover {
+    transform: scaleY(1.1);
+    transition: 0.5s;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 37px;
@@ -34,9 +37,6 @@
 
 .goods-list__item-wrapper {
   position: relative;
-
-  // &--left {}
-  // &--right {}
 }
 
 .goods-list__link {
@@ -46,6 +46,11 @@
   padding-top: 24px;
   padding-bottom: 31px;
   color: $white;
+
+  &:hover {
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
 
   @media (min-width: $tablet-width) {
     @include font(20px, 30px, 700);

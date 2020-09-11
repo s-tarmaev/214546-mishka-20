@@ -1,14 +1,10 @@
 .application-form {
   display: flex;
   flex-direction: column;
-
 }
 
 .application-form__item {
   border: none;
-  // border-top-width: 1px;
-  // border-top-style: solid;
-  // border-top-color: $background-green-color;
   padding: 0;
   margin: 0;
 
@@ -18,7 +14,6 @@
 }
 
 .application-form__wrapper {
-
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -49,18 +44,6 @@
       margin: 0 auto;
       margin-top: 34px;
     }
-  }
-}
-
-.application-form__legend {
-  @include font(17px, 16px, 700);
-  text-transform: uppercase;
-  color: $green-left;
-  padding-right: 17px;
-  margin-left: 0;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 15px;
   }
 }
 

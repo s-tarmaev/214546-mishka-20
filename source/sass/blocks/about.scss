@@ -1,6 +1,20 @@
+.about {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
 .about__wrapper {
   @include wrapper;
-  margin-top: 74px;
+  margin-top: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 66px;
+  }
 }
 
 .about__title {
@@ -51,12 +65,8 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
 
-    &:last-child {
-      margin-bottom: 70px;
-    }
-
     &:nth-child(3n) {
-      margin-bottom: 62px;
+      margin-bottom: 0;
     }
   }
 
@@ -74,13 +84,14 @@
 }
 
 .about__icon {
+  position: absolute;
+  fill: $green-left;
+
   &--flower {
-    position: absolute;
     bottom: 56px;
     left: 7px;
     width: 32px;
     height: 37px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 83px;
@@ -88,12 +99,10 @@
   }
 
   &--money {
-    position: absolute;
     bottom: 66px;
     left: 0;
     width: 47px;
     height: 27px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 91px;
@@ -101,12 +110,10 @@
   }
 
   &--heart {
-    position: absolute;
     bottom: 61px;
     left: 7px;
     width: 34px;
     height: 27px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 83px;
@@ -114,12 +121,10 @@
   }
 
   &--ball {
-    position: absolute;
     bottom: 57px;
     left: 4px;
     width: 35px;
     height: 34px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 83px;
@@ -127,12 +132,10 @@
   }
 
   &--rocket {
-    position: absolute;
     bottom: 66px;
     left: -6px;
     width: 55px;
     height: 23px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 91px;
@@ -140,12 +143,10 @@
   }
 
   &--gift {
-    position: absolute;
     bottom: 60px;
     left: 3px;
     width: 33px;
     height: 32px;
-    fill: $green-left;
 
     @media (min-width: $tablet-width) {
       bottom: 83px;
