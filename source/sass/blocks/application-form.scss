@@ -13,37 +13,25 @@
   }
 }
 
-.application-form__wrapper {
+.application-form__wrapper-contacts {
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.application-form__wrapper-submit {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 39px;
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-  }
-
-  &--contacts {
-    @media (min-width: $tablet-width) {
-      margin-top: 32px;
-      margin-bottom: 32px;
-    }
-  }
-
-  &--submit {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-top: 39px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 67%;
-      margin: 0 auto;
-      margin-top: 34px;
-    }
+    width: 67%;
+    margin: 0 auto;
+    margin-top: 34px;
   }
 }
 
@@ -60,7 +48,7 @@
 .application-form__button {
   @include button;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 27px;
 
   @media (min-width: $tablet-width) {
     width: 230px;

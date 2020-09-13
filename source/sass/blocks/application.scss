@@ -1,5 +1,5 @@
 .application {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient($white 34.5%, $grayscale 34.5%, $grayscale 52%, $white 52%, $white 69.5%, $grayscale 69.5%, $grayscale 83%, $white 83%);
@@ -7,6 +7,7 @@
 
   @media (min-width: $desktop-width) {
     background-image: linear-gradient($white 39%, $grayscale 39%, $grayscale 52%, $white 52%, $white 70%, $grayscale 70%, $grayscale 83%, $white 83%);
+    margin-bottom: 50px;
   }
 }
 

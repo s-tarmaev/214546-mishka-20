@@ -1,9 +1,22 @@
+.radio__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
 .radio__legend {
   @include font(17px, 16px, 700);
   position: relative;
   width: 100%;
   text-transform: uppercase;
   color: $green-left;
+  margin-top: 0;
   margin-left: 0;
 
   &::after {

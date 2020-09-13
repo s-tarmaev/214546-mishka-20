@@ -53,7 +53,6 @@ exports.default = gulp.series(styles, server, watcher);
 
 // Imagemin
 
-// const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}").pipe(
@@ -70,7 +69,6 @@ exports.images = images;
 
 // WebP
 
-// const gulp = require("gulp");
 const webp = require("gulp-webp");
 const createWebp = () => {
   return gulp
@@ -82,8 +80,6 @@ exports.webp = createWebp;
 
 // Sprites
 
-// const gulp = require("gulp");
-// const rename = require("rename");
 const svgstore = require("gulp-svgstore");
 const sprite = () => {
   return gulp
@@ -108,6 +104,7 @@ const copy = () => {
         "source/img/**",
         "source/js/**",
         "source/*.ico",
+        "source/*.html",
       ],
       {
         base: "source",
@@ -119,7 +116,6 @@ exports.copy = copy;
 
 // Clean
 
-// const gulp = require("gulp");
 const del = require("del");
 const clean = () => {
   return del("build");
@@ -127,7 +123,6 @@ const clean = () => {
 exports.clean = clean;
 
 // Build
-// const gulp = require("gulp");
 
 const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
 exports.build = build;

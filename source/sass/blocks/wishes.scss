@@ -6,12 +6,26 @@
   }
 }
 
+.wishes__wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
 .wishes__legend {
   @include font(17px, 16px, 700);
   position: relative;
   width: 100%;
   text-transform: uppercase;
   color: $green-left;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: 0;
 
   &::after {
@@ -30,6 +44,10 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 62px;
   }
 }
 

@@ -92,18 +92,18 @@
     grid-area: a;
     padding-right: 17px;
   }
+}
 
-  & img {
-    width: 260px;
+.production__image {
+  width: 260px;
 
-    @media (min-width: $tablet-width) {
-      width: 668px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 668px;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding-top: 0;
-      width: 683px;
-    }
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    width: 683px;
   }
 }
 
@@ -111,7 +111,7 @@
   position: absolute;
   width: 100px;
   left: 79px;
-  bottom: 37px;
+  bottom: 292px;
 
   &:hover {
     transform: scale(1.2);

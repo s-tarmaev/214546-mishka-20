@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Мишка</title>
     <link href="css/styles.min.css" rel="stylesheet" />
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
   </head>
   <body class="page__body">
     <svg
@@ -381,7 +382,7 @@
             action="https://echo.htmlacademy.ru"
           >
             <div class="application-form__item radio">
-              <div class="application-form__wrapper">
+              <div class="radio__wrapper">
                 <h3 class="radio__legend">Тип</h3>
                 <ul class="radio__list">
                   <li class="radio__option">
@@ -412,9 +413,8 @@
                 </ul>
               </div>
             </div>
-
             <div class="application-form__item checkbox">
-              <div class="application-form__wrapper">
+              <div class="checkbox__wrapper">
                 <h3 class="checkbox__legend">Цвет</h3>
                 <ul class="checkbox__list checkbox__list">
                   <li class="checkbox__option">
@@ -481,7 +481,7 @@
               </div>
             </div>
             <div class="application-form__item client-name">
-              <div class="application-form__wrapper">
+              <div class="client-name__wrapper">
                 <h3 class="client-name__legend">ФИО</h3>
                 <ul class="client-name__list">
                   <li class="client-name__option">
@@ -492,6 +492,7 @@
                       type="text"
                       name="name"
                       placeholder="Введите ваше имя*"
+                      required
                     />
                   </li>
                   <li class="client-name__option">
@@ -504,6 +505,7 @@
                       type="text"
                       name="surname"
                       placeholder="Укажите фамилию*"
+                      required
                     />
                   </li>
                   <li class="client-name__option">
@@ -521,9 +523,9 @@
                 </ul>
               </div>
             </div>
-            <div class="application-form__wrapper--contacts">
+            <div class="application-form__wrapper-contacts">
               <div class="application-form__item client-contacts">
-                <div class="application-form__wrapper">
+                <div class="client-contacts__wrapper">
                   <h3
                     class="client-contacts__legend client-contacts__legend--phone"
                   >
@@ -539,6 +541,7 @@
                       type="tel"
                       name="telephone"
                       placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+                      required
                     />
                     <svg
                       class="client-contacts__icon client-contacts__icon--phone"
@@ -551,7 +554,7 @@
                 </div>
               </div>
               <div class="application-form__item client-contacts">
-                <div class="application-form__wrapper">
+                <div class="client-contacts__wrapper">
                   <h3
                     class="client-contacts__legend client-contacts__legend--mail"
                   >
@@ -567,6 +570,7 @@
                       type="email"
                       name="email"
                       placeholder="Ваш Email*"
+                      required
                     />
                     <svg
                       class="client-contacts__icon client-contacts__icon--mail"
@@ -580,7 +584,7 @@
               </div>
             </div>
             <div class="application-form__item wishes">
-              <div class="application-form__wrapper">
+              <div class="wishes__wrapper">
                 <h3 class="wishes__legend">Доп</h3>
                 <label class="visually-hidden" for="wishes"
                   >Пожелания к заказу</label
@@ -593,7 +597,7 @@
                 ></textarea>
               </div>
             </div>
-            <div class="application-form__wrapper--submit">
+            <div class="application-form__wrapper-submit">
               <small class="application-form__annotation"
                 >*Поля обязательны для заполнения</small
               >
