@@ -6,6 +6,7 @@
 }
 
 .goods-list__item {
+
   padding-left: 31px;
   padding-right: 36px;
 
@@ -36,13 +37,48 @@
 }
 
 .goods-list__item-wrapper {
+  @include wrapper;
   position: relative;
+
+  &--left::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    top: 25px;
+    right: 0;
+    width: 40px;
+    height: 62px;
+    opacity: 0.5;
+  }
+
+  &--right::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    top: 22px;
+    right: -9px;
+    width: 61px;
+    height: 61px;
+    opacity: 0.5;
+  }
+
+  &--left:hover::after,
+  &--right:hover::after {
+    opacity: 0.7;
+  }
+
+  &--left:active::after,
+  &--right:active::after {
+    opacity: 0.3;
+  }
 }
 
 .goods-list__link {
   @include font(19px, 24px, 700);
   display: block;
-  width: 100%;
+  width: 130px;
   padding-top: 24px;
   padding-bottom: 31px;
   color: $white;
@@ -56,39 +92,5 @@
     @include font(20px, 30px, 700);
     padding-top: 25px;
     padding-bottom: 34px;
-  }
-
-  &--interior::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/icon-interior.svg");
-    background-repeat: no-repeat;
-    top: 25px;
-    right: 0;
-    width: 40px;
-    height: 62px;
-    opacity: 0.5;
-  }
-
-  &--toy::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/icon-toy.svg");
-    background-repeat: no-repeat;
-    top: 22px;
-    right: -9px;
-    width: 61px;
-    height: 61px;
-    opacity: 0.5;
-  }
-
-  &--interior:hover::after,
-  &--toy:hover::after {
-    opacity: 0.7;
-  }
-
-  &--interior:active::after,
-  &--toy:active::after {
-    opacity: 0.3;
   }
 }

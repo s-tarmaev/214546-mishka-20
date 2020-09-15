@@ -68,6 +68,7 @@
   border-bottom-color: $black;
   padding-top: 22px;
   padding-bottom: 15px;
+  padding-left: 18px;
   margin-bottom: 34px;
   outline: none;
 
@@ -85,7 +86,7 @@
 
     @media (min-width: $tablet-width) {
       @include font(19px, 18px, 400);
-      padding-left: 15px;
+      // padding-left: 15px;
     }
   }
 

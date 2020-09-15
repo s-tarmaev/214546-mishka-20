@@ -1,4 +1,6 @@
 .catalog {
+  position: relative;
+  background-color: $background-main;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -14px;
@@ -29,6 +31,7 @@
   }
 }
 
+
 .catalog__title {
   @include font(27px, 30px, 700);
   width: 260px;
@@ -57,7 +60,6 @@
 
 .catalog__list {
   @include reset-list;
-  position: relative;
 
   @media (min-width: $tablet-width) {
     @include wrapper;
@@ -69,8 +71,8 @@
       background-size: 770px;
       background-repeat: repeat-x;
       bottom: -21px;
-      left: -50px;
-      width: 770px;
+      left: 0;
+      width: 100%;
       height: 34px;
     }
   }
@@ -78,8 +80,6 @@
   @media (min-width: $desktop-width) {
     &::after {
       background-size: 1250px;
-      width: 1250px;
-      left: -100px;
       bottom: -15px;
     }
   }

@@ -1,16 +1,16 @@
 .about {
   @media (min-width: $tablet-width) {
-    margin-bottom: 63px;
+    margin-bottom: 84px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 71px;
+    margin-bottom: 90px;
   }
 }
 
 .about__wrapper {
   @include wrapper;
-  margin-top: 70px;
+  margin-top: 73px;
 
   @media (min-width: $tablet-width) {
     margin-top: 66px;
@@ -20,19 +20,18 @@
 .about__title {
   @include font(25px, 30px, 700);
   padding: 0;
-  margin-bottom: 82px;
+  margin-bottom: 83px;
 
   @media (min-width: $tablet-width) {
     @include font(43px, 50px, 700);
     margin-top: 67px;
-    margin-bottom: 78px;
+    margin-bottom: 98px;
   }
 
   @media (min-width: $desktop-width) {
     @include font(53px, 57px, 700);
     margin-top: 105px;
     margin-right: 175px;
-    margin-bottom: 75px;
     margin-left: 175px;
   }
 }
@@ -55,15 +54,101 @@
 }
 
 .about__item {
+  @include font(17px, 20px, 700);
   position: relative;
   margin-bottom: 83px;
+
+  &--flower::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-flower.svg");
+    bottom: 56px;
+    left: 7px;
+    width: 32px;
+    height: 37px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 64px;
+    }
+  }
+
+  &--money::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-money.svg");
+    bottom: 66px;
+    left: 0;
+    width: 47px;
+    height: 27px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 71px;
+    }
+  }
+
+  &--heart::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-heart.svg");
+    bottom: 61px;
+    left: 7px;
+    width: 34px;
+    height: 27px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 64px;
+    }
+  }
+
+  &--ball::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-ball.svg");
+    bottom: 57px;
+    left: 4px;
+    width: 35px;
+    height: 34px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 64px;
+    }
+  }
+
+  &--rocket::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-rocket.svg");
+    bottom: 66px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 72px;
+    }
+  }
+
+  &--gift::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-feature-gift.svg");
+    bottom: 60px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
+
+    @media (min-width: $tablet-width) {
+      bottom: 64px;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    @include font(20px, 22px, 700);
+    margin-bottom: 110px;
 
     &:nth-child(3n) {
       margin-bottom: 0;
@@ -72,84 +157,5 @@
 
   @media (min-width: $desktop-width) {
     flex-basis: 350px;
-  }
-}
-
-.about__text {
-  @include font(17px, 20px, 700);
-
-  @media (min-width: $tablet-width) {
-    @include font(20px, 22px, 700);
-  }
-}
-
-.about__icon {
-  position: absolute;
-  fill: $green-left;
-
-  &--flower {
-    bottom: 56px;
-    left: 7px;
-    width: 32px;
-    height: 37px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 83px;
-    }
-  }
-
-  &--money {
-    bottom: 66px;
-    left: 0;
-    width: 47px;
-    height: 27px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 91px;
-    }
-  }
-
-  &--heart {
-    bottom: 61px;
-    left: 7px;
-    width: 34px;
-    height: 27px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 83px;
-    }
-  }
-
-  &--ball {
-    bottom: 57px;
-    left: 4px;
-    width: 35px;
-    height: 34px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 83px;
-    }
-  }
-
-  &--rocket {
-    bottom: 66px;
-    left: -6px;
-    width: 55px;
-    height: 23px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 91px;
-    }
-  }
-
-  &--gift {
-    bottom: 60px;
-    left: 3px;
-    width: 33px;
-    height: 32px;
-
-    @media (min-width: $tablet-width) {
-      bottom: 83px;
-    }
   }
 }

@@ -1,9 +1,29 @@
 .reviews {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: 320px;
+    background-repeat: repeat-x;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+  }
+
   @media (min-width: $tablet-width) {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 120px;
+
+    &::after {
+      background-size: 770px;
+      bottom: -109px;
+      height: 40px;
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/review@2x.jpg");
@@ -13,6 +33,10 @@
   @media (min-width: $desktop-width) {
     background-image: none;
     margin-bottom: 160px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -28,18 +52,6 @@
     align-items: start;
     padding-top: 50px;
     padding-bottom: 49px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-size: 770px;
-      background-repeat: repeat-x;
-      bottom: -109px;
-      left: -52px;
-      width: 1540px;
-      height: 40px;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -56,9 +68,15 @@
     }
 
     &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/bg-zigzag-line.svg");
       background-size: 1050px;
+      background-repeat: repeat-x;
       width: 1050px;
+      height: 40px;
       left: 0;
+      bottom: -109px;
     }
   }
 }

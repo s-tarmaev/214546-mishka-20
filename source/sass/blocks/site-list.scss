@@ -92,6 +92,11 @@
     opacity: 0.3;
   }
 
+  &--current:hover,
+  &--current:active {
+    opacity: 1;
+  }
+
   &--knitting {
     @media (min-width: $desktop-width) {
       padding-left: 35px;
